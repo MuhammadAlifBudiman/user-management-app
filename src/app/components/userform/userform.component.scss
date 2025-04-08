@@ -1,41 +1,56 @@
 .user-form-container {
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  max-width: 400px;
-  background-image: linear-gradient(to bottom right, #eaf4ff, #c7e0ff);
+  background: linear-gradient(to bottom right, #f0f8ff, #d0e8ff);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin: 30px auto;
+  max-width: 420px;
 
   h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    color: #333;
   }
 
   input {
-    display: block;
     width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95em;
+    transition: border-color 0.3s;
+
+    &:focus {
+      outline: none;
+      border-color: #2890ff;
+      box-shadow: 0 0 5px rgba(40, 144, 255, 0.3);
+    }
   }
 
   button {
+    width: 100%;
     background-color: #2890ff;
     color: white;
-    border-radius: 5px;
-    padding: 12px 20px;
-    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    padding: 14px;
     font-size: 1em;
+    cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
-  }
 
-  button:hover {
-    background-color: #176fce;
-    transform: translateY(-2px);
-  }
+    &:hover {
+      background-color: #176fce;
+      transform: translateY(-2px);
+    }
 
-  button:active {
-    transform: translateY(1px);
+    &:active {
+      transform: translateY(1px);
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
   }
 }
